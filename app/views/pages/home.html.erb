@@ -1,0 +1,26 @@
+<div class="container">
+  <h1>Landing Page</h1>
+
+  <!-- er + tab (doesnt display) -->
+  <%  %>
+
+  <!-- pe + tab (does display) -->
+  <p><%=  %></p>
+
+  <!-- cmd + ? (comment) -->
+  <%#  %>
+
+  <%# not going to use an anchor tag ever again %>
+
+  <!-- lt + tab ( text you see, path, options) -->
+  <%= link_to 'About', about_path, class: 'btn btn-primary' %>
+  <%= link_to 'Contact', contact_path, class: 'btn btn-primary' %>
+
+  <!-- for linking a html element -->
+  <%= link_to contact_path, class: 'btn btn-primary' do %>
+    <i class='fas far-checl'></i>
+  <% end %>
+
+
+
+</div>

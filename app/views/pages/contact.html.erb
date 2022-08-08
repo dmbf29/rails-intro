@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>Contact</h1>
+
+  <form action="/contact" method="get">
+    <input type="text" name="member" value="<%= params[:member] %>">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <%= hidden_field_tag :letters, "abcdefg" %>
+
+    <input type="submit" class="btn btn-light">
+  </form>
+
+  <ul>
+    <% if @members.any? %>
+      <% @members.each do |member| %>
+        <li><%= member.capitalize %></li>
+      <% end %>
+    <% else %>
+      <li>No members found with: <%= params[:member] %></li>
+    <% end %>
+  </ul>
+
+  <p><%= link_to 'Home', root_path, class: 'btn btn-primary'  %></p>
+
+</div>
